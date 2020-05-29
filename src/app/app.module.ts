@@ -4,9 +4,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ShortNumberPipe } from './pipes/short-number.pipe';
+import { JwPaginationComponent } from './components/jw-pagination/jw-pagination.component';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 @NgModule({
-  declarations: [AppComponent, ShortNumberPipe],
+  declarations: [AppComponent, ShortNumberPipe, JwPaginationComponent, DateAgoPipe],
   imports: [BrowserModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
