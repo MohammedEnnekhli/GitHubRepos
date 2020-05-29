@@ -13,12 +13,12 @@
           <p class="card-text">
             <small class="text-muted">
               <span class="badge badge-pill badge-danger"
-                >Issues: {{ r.open_issues }}</span
+                >Issues: {{ r.open_issues | shortNumber }}</span
               ></small
             >
             <small class="text-muted">
               <span class="badge badge-pill badge-warning"
-                >Stars:{{ r.stargazers_count }}</span
+                >Stars:{{ r.stargazers_count | shortNumber }}</span
               ></small
             >
           </p>
