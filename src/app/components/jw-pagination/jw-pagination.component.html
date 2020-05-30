@@ -1,39 +1,38 @@
-<ul *ngIf="pager.pages && pager.pages.length" class="pagination pg-purple">
-  <li
-    [ngClass]="{ disabled: pager.currentPage === 1 }"
-    class="page-item first-item"
+<nav aria-label="Page navigation example">
+  <ul
+    *ngIf="pager.pages && pager.pages.length"
+    class="pagination justify-content-center"
   >
-    <a (click)="setPage(1)" class="page-link" mdbWavesEffect>First</a>
-  </li>
-  <li
-    [ngClass]="{ disabled: pager.currentPage === 1 }"
-    class="page-item previous-item"
-  >
-    <a (click)="setPage(pager.currentPage - 1)" class="page-link" mdbWavesEffect
-      >Previous</a
+    <li
+      [ngClass]="{ disabled: pager.currentPage === 1 }"
+      class="page-item first-item"
     >
-  </li>
-  <li
-    *ngFor="let page of pager.pages"
-    [ngClass]="{ active: pager.currentPage === page }"
-    class="page-item number-item"
-  >
-    <a (click)="setPage(page)" class="page-link" mdbWavesEffect>{{ page }}</a>
-  </li>
-  <li
-    [ngClass]="{ disabled: pager.currentPage === pager.totalPages }"
-    class="page-item next-item"
-  >
-    <a (click)="setPage(pager.currentPage + 1)" class="page-link" mdbWavesEffect
-      >Next</a
+      <a (click)="setPage(1)" class="page-link">First</a>
+    </li>
+    <li
+      [ngClass]="{ disabled: pager.currentPage === 1 }"
+      class="page-item previous-item"
     >
-  </li>
-  <li
-    [ngClass]="{ disabled: pager.currentPage === pager.totalPages }"
-    class="page-item last-item"
-  >
-    <a (click)="setPage(pager.totalPages)" class="page-link" mdbWavesEffect
-      >Last</a
+      <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
+    </li>
+    <li
+      *ngFor="let page of pager.pages"
+      [ngClass]="{ active: pager.currentPage === page }"
+      class="page-item number-item"
     >
-  </li>
-</ul>
+      <a (click)="setPage(page)" class="page-link">{{ page }}</a>
+    </li>
+    <li
+      [ngClass]="{ disabled: pager.currentPage === pager.totalPages }"
+      class="page-item next-item"
+    >
+      <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
+    </li>
+    <li
+      [ngClass]="{ disabled: pager.currentPage === pager.totalPages }"
+      class="page-item last-item"
+    >
+      <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
+    </li>
+  </ul>
+</nav>

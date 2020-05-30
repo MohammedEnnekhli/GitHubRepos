@@ -10,6 +10,7 @@ import { RepositoryService } from './services/repositories.service';
 export class AppComponent {
   repos: Array<Repository> = new Array<Repository>();
   currentPageOfRepos: Array<Repository>;
+
   constructor(private reposiService: RepositoryService) {}
 
   ngOnInit() {
